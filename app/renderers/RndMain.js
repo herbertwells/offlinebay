@@ -1212,40 +1212,6 @@ function popMsg(txt, type) {
     });
 }
 
-// Pop up Support offlinebay alert
-function popSupportMsg() {
-    $.notify({}, {
-        type: 'light',
-        delay: 0,
-        z_index: 1051,
-        placement: {
-            from: 'bottom',
-            align: 'right'
-        },
-        animate: {
-            enter: 'animated fadeInUp',
-            exit: 'animated fadeOutDown'
-        },
-        template: '<div data-notify="container" class="col-xs-11 col-sm-4 alert alert-{0} alert-or support-alert" role="alert">' +
-        '    <button type="button" aria-hidden="true" class="close close-or" data-notify="dismiss">&times;</button>' +
-        '    <h2>Loving OfflineBay?</h2>' +
-        '    <h5>Give some support..</h5>' +
-        '    <div class="support-body">' +
-        '        <div>' +
-        '            <img src="img/heart.png">' +
-        '        </div>' +
-        '        <div class="item-v-center">' +
-        '            <div>' +
-        '                <span>BTC : <b><a class="btcLink">12d9qz6bzL6tiB4oeX595oEo9ENMTEzF5y</a></b></span>' +
-        '                <span>ETH : <b><a class="ethLink">0xe84CBc4B4C64c6800619942172F93dcfb1030972</a></b></span>' +
-        '                <span>BCH : <b><a class="bchLink">qqguu77ylq7p72m02ksv78jyzy86vtk6jqtrrc40r3</a></b></span>' +
-        '            </div>' +
-        '        </div>' +
-        '    </div>' +
-        '</div>'
-    });
-}
-
 $('body').on('click', '.btcLink, .ethLink, .bchLink', function () {
     clipboard.writeText($(this).html());
     popMsg('Address copied to clipboard', 'info');

@@ -538,7 +538,7 @@ function showSplash() {
         transparent: true,
         alwaysOnTop: true,
         icon: appIcon,
-        title: 'OfflineBay by TechTac'
+        title: 'OfflineBay'
     });
 
     splashWindow.loadURL(url.format({
